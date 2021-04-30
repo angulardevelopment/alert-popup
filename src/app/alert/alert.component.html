@@ -1,0 +1,17 @@
+<div [ngClass]="isOpen ? 'open' : 'close'" class="popup-main background-blur">
+
+  <div class="popup-container" style="display: flex;">
+  <div class="popup-header">
+  header
+</div>
+
+  <div class="popup-body">
+    {{title}}
+  </div>
+  <div class="popup-buttons">
+    <ng-container [ngTemplateOutlet]="buttonRow"></ng-container>
+  </div>
+</div>
+</div>
+
+

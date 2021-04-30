@@ -1,3 +1,7 @@
+# About
+
+basic alert without library usage
+
 # AlertPopup
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.3.
