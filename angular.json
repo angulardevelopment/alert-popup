@@ -23,7 +23,6 @@
             "outputPath": "dist/alert-popup",
             "index": "src/index.html",
             "main": "src/main.ts",
-            "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "aot": true,
             "assets": [
@@ -68,25 +67,24 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "alert-popup:build"
+            "buildTarget": "alert-popup:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "alert-popup:build:production"
+              "buildTarget": "alert-popup:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "alert-popup:build"
+            "buildTarget": "alert-popup:build"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
             "main": "src/test.ts",
-            "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "assets": [
@@ -127,7 +125,6 @@
       }
     }
   },
-  "defaultProject": "alert-popup",
   "cli": {
     "analytics": "5209dd0c-ddb5-45dc-86c7-2a29e3c5936e"
   }

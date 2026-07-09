@@ -1,9 +1,12 @@
 import { Component, OnInit, Renderer2, ViewChild, TemplateRef } from '@angular/core';
 import { PopupService } from '../popup.service';
+import { AlertComponent } from '../alert/alert.component';
 @Component({
   selector: 'app-comp1',
   templateUrl: './comp1.component.html',
-  styleUrls: ['./comp1.component.css']
+  styleUrls: ['./comp1.component.css'],
+    imports: [AlertComponent]
+  
 })
 export class Comp1Component implements OnInit {
 
