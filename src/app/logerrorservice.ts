@@ -25,3 +25,20 @@ export interface LogError {
     Message : string; 
     User : string;
  }
+
+ import { Component, injectAsync } from '@angular/core';
+
+@Component({
+  selector: 'app-report',
+  template: `<button (click)="export()">Export</button>`
+})
+export class Report {
+  private exporter = injectAsync(() =>
+    import('./report-exporter').then((m) => m.ReportExporter)
+  );
+
+  async export() {
+    const exporter = await this.exporter();
+    exporter.export();
+  }
+}
